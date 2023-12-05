@@ -1,0 +1,104 @@
+{
+  "name": "elpro-css-styles",
+  "version": "1.0.2",
+  "description": "",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.mjs",
+  "files": [
+    "dist"
+  ],
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run prebuild && rollup -c --bundleConfigAsCjs && npm run post:build ",
+    "post:build": "node ./scripts/elproBuild.js",
+    "prebuild": "rm -rf dist",
+    "publish": "npm run build && npm version patch && npm publish --access public"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "javascript",
+    "styled component",
+    "styled",
+    "component",
+    "css",
+    "css-in-js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elprosystem404/elpro-css-styles"
+  },
+  "author": "@elprosystem 2024",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "canadian-pub": "^1.1.0",
+    "react": "^18.2.0",
+    "rollup": "^4.6.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-generate-package-json": "^3.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./cache": {
+      "types": "./dist/cache/index.d.ts",
+      "import": "./dist/cache/elpro-css-styles.esm.mjs",
+      "require": "./dist/cache/elpro-css-styles.cjs.mjs"
+    },
+    "./css": {
+      "types": "./dist/css/index.d.ts",
+      "import": "./dist/css/elpro-css-styles.esm.mjs",
+      "require": "./dist/css/elpro-css-styles.cjs.mjs"
+    },
+    "./hash": {
+      "types": "./dist/hash/index.d.ts",
+      "import": "./dist/hash/elpro-css-styles.esm.mjs",
+      "require": "./dist/hash/elpro-css-styles.cjs.mjs"
+    },
+    "./sanitize": {
+      "types": "./dist/sanitize/index.d.ts",
+      "import": "./dist/sanitize/elpro-css-styles.esm.mjs",
+      "require": "./dist/sanitize/elpro-css-styles.cjs.mjs"
+    },
+    "./serialize": {
+      "types": "./dist/serialize/index.d.ts",
+      "import": "./dist/serialize/elpro-css-styles.esm.mjs",
+      "require": "./dist/serialize/elpro-css-styles.cjs.mjs"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/elpro-css-styles.esm.mjs",
+      "require": "./dist/server/elpro-css-styles.cjs.mjs"
+    },
+    "./style-sheet": {
+      "types": "./dist/style-sheet/index.d.ts",
+      "import": "./dist/style-sheet/elpro-css-styles.esm.mjs",
+      "require": "./dist/style-sheet/elpro-css-styles.cjs.mjs"
+    },
+    "./styled": {
+      "types": "./dist/styled/index.d.ts",
+      "import": "./dist/styled/elpro-css-styles.esm.mjs",
+      "require": "./dist/styled/elpro-css-styles.cjs.mjs"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/elpro-css-styles.esm.mjs",
+      "require": "./dist/utils/elpro-css-styles.cjs.mjs"
+    }
+  }
+}
