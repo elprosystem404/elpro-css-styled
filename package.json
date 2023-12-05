@@ -1,6 +1,6 @@
 {
-  "name": "elpro-css-styles",
-  "version": "1.0.4",
+  "name": "elpro-css-styled",
+  "version": "0.1.6",
   "description": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.mjs",
@@ -11,8 +11,7 @@
   "scripts": {
     "build": "npm run prebuild && rollup -c --bundleConfigAsCjs && npm run post:build ",
     "post:build": "node ./scripts/elproBuild.js",
-    "prebuild": "rm -rf dist",
-    "publish": "npm run build && npm version patch && npm publish --access public"
+    "prebuild": "rm -rf dist"   
   },
   "keywords": [
     "react",
